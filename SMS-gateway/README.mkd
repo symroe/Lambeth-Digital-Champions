@@ -1,0 +1,13 @@
+# SMS gateway
+
+Very rough demo (this is a hack day) of an email to SMS gateway.
+
+# Usage
+
+Written in Python.
+
+To run, first set up a virtual environment and `pip install requiremnts.txt` 
+
+send.py reads from stdin and sends an SMS to a number, using a twilio account.
+
+Use `cat test_mail.email | python send.py` for testing.
