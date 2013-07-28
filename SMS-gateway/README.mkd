@@ -6,8 +6,19 @@ Very rough demo (this is a hack day) of an email to SMS gateway.
 
 Written in Python.
 
-To run, first set up a virtual environment and `pip install requiremnts.txt` 
+1. set up a virtual environment and `pip install requiremnts.txt` 
+ 
+* make a file called `settings.py` in the same directory as `send.py` and add two variables; `account_sid` and `auth_token` from twilio.
 
-send.py reads from stdin and sends an SMS to a number, using a twilio account.
+
+send.py reads from stdin and sends an SMS to a number, using the twilio account defined in `settings.py`.
 
 Use `cat test_mail.email | python send.py` for testing.
+
+# Installation
+
+A valid email string needs to be passes to `send.py`'s stdin.  In postfix this can be done by editing `/etc/alises` and adding something like the following:
+
+    [alias]: [localuser], "|[path/to]/send.py"
+
+With a valid postfix config, sending an email to [alias]@example.com will pipe the message to a script.  There are numerous places on the internet explaining this set up.

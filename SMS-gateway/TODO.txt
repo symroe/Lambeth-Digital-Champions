@@ -1,0 +1,6 @@
+This is clearly a hack and not designed to work in the long term.
+
+That being said, a deployed version of this script would have:
+
+* Validation of user's phone numbers (confirmation code send to mobile)
+* Dynamic email addresses ([number]@example.com)?
