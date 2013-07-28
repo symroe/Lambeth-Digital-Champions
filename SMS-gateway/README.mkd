@@ -2,7 +2,17 @@
 
 Very rough demo (this is a hack day) of an email to SMS gateway.
 
-# Usage
+## Reason
+
+This is a prototype of a service that would send users an SMS when they get an email.
+
+The main reason for this is to help people who have just got online and don't have regular access to a computer.  
+
+There are cases, particularly after the new Universal Credit System comes in to force, that will require people to be online and have an email address that receives emails related to their application.
+
+To save these people either forgetting about their email address, or needlessly logging in to fine they have no email, this service will tell them when they need to, for example, visit their local library to read important emails about their Universal Credit application.
+
+## Usage
 
 Written in Python.
 
@@ -15,7 +25,7 @@ send.py reads from stdin and sends an SMS to a number, using the twilio account 
 
 Use `cat test_mail.email | python send.py` for testing.
 
-# Installation
+## Installation
 
 A valid email string needs to be passes to `send.py`'s stdin.  In postfix this can be done by editing `/etc/alises` and adding something like the following:
 
